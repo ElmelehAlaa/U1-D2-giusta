@@ -1,4 +1,5 @@
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -20,8 +21,8 @@ public class Main {
         switchNumero(num3);
 
         System.out.println("Inserisci una stringa");
-        String str = input.nextLine();
-        whileString(str);
+        String stringa = input.nextLine();
+        whileString(stringa);
 
         System.out.println("Inserisci un numero intero");
         int num4 = input.nextInt();
@@ -61,13 +62,22 @@ public class Main {
         }
     }
 
-   public  static void whileString (String str){
-       while (str.contains("q")){
-           System.out.println(str);
-           Scanner input = new Scanner(System.in);
-           System.out.println("Inserisci un'altra stringa");
-           str = input.nextLine();
-           input.close();
+   public  static void whileString (String stringa){
+       while (true){
+
+           if (stringa.equals(":q")){
+               break;
+           }
+           else {
+               String[] strChar = stringa.split(",");
+               System.out.println(Arrays.toString(strChar));
+               Scanner input = new Scanner(System.in);
+               System.out.println("Inserisci un'altra stringa");
+                  stringa = input.nextLine();
+               input.close();
+           }
+
+
        }
    }
 
