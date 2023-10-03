@@ -1,4 +1,4 @@
-import java.util.Objects;
+
 import java.util.Scanner;
 
 public class Main {
@@ -19,9 +19,13 @@ public class Main {
         int num3 = input.nextInt();
         switchNumero(num3);
 
-//        System.out.println("Inserisci una stringa");
-//        String str = input.next();
-//        whileString(str);
+        System.out.println("Inserisci una stringa");
+        String str = input.nextLine();
+        whileString(str);
+
+        System.out.println("Inserisci un numero intero");
+        int num4 = input.nextInt();
+        forNumb(num4);
 
 
 
@@ -57,14 +61,21 @@ public class Main {
         }
     }
 
-//    public  static void whileString (String str){
-//        while (Objects.equals(str,  ":q")){
-//            System.out.println(str.toCharArray());
-//            Scanner input = new Scanner(System.in);
-//            System.out.println("Inserisci un'altra stringa");
-//            str = input.nextLine();
-//
-//        }
-//    }
+   public  static void whileString (String str){
+       while (str.contains("q")){
+           System.out.println(str);
+           Scanner input = new Scanner(System.in);
+           System.out.println("Inserisci un'altra stringa");
+           str = input.nextLine();
+           input.close();
+       }
+   }
 
+    public  static void forNumb(int num4){
+
+        for( int i=num4; ;i--){
+            if (i==-1) break;
+            System.out.println(i);
+        }
+    }
 }
