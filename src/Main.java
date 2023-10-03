@@ -1,4 +1,5 @@
 
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -6,6 +7,10 @@ public class Main {
     public static void main(String[] args) {
 
        Scanner input = new Scanner(System.in);
+
+
+//       ESERCIZIO 1
+
 
         System.out.println("Inserisci un numero intero");
       int num1 = input.nextInt();
@@ -62,24 +67,45 @@ public class Main {
         }
     }
 
-   public  static void whileString (String stringa){
-       while (true){
+//   public  static void whileString (String stringa){
+//       while (true){
+//
+//           if (stringa.equals(":q")){
+//               break;
+//           }
+//           else {
+//               String[] strChar = stringa.split(",");
+//               System.out.println(Arrays.toString(strChar));
+//               Scanner input = new Scanner(System.in);
+//               System.out.println("Inserisci un'altra stringa");
+//                  stringa = input.nextLine();
+//               input.close();
+//           }
+//
+//
+//       }
+//   }
 
-           if (stringa.equals(":q")){
-               break;
-           }
-           else {
-               String[] strChar = stringa.split(",");
-               System.out.println(Arrays.toString(strChar));
-               Scanner input = new Scanner(System.in);
-               System.out.println("Inserisci un'altra stringa");
-                  stringa = input.nextLine();
-               input.close();
-           }
+    public  static void whileString (String stringa){
+        Scanner inputStringa = new Scanner(System.in);
+        while (true){
+            System.out.println("Inserisci una stringa");
+            stringa = inputStringa.nextLine();
+            System.out.println(stringa);
+            if(stringa.equals(":q")) {
+                System.out.println("While Terminato!");
+                break;
+            }
+            else {
+                String[] stringChars = new String[]{stringa};
+                System.out.println(Arrays.toString(Arrays.toString(stringChars).split(",")).trim());
+
+            }
+
+            }
+        }
 
 
-       }
-   }
 
     public  static void forNumb(int num4){
 
