@@ -43,7 +43,7 @@ public class Main {
         System.out.println(num1%2 == 0? "true! Numero è pari": "False! Numero è dispari!");
     }
  public static void annoBisestile(int num2){
-      System.out.println(num2%4 == 0 | num2%100==0 & num2%400 ==0? "true! Anno bisestile!" :"False! non é bisestile");
+      System.out.println(  num2 % 400 == 0  || num2 % 4 == 0 && num2% 100 !=0? "true! Anno bisestile!" :"False! non é bisestile");
  }
     public  static void switchNumero (int num3){
         switch(num3){
@@ -97,8 +97,8 @@ public class Main {
                 break;
             }
             else {
-                String[] stringChars = new String[]{stringa};
-                System.out.println(Arrays.toString(Arrays.toString(stringChars).split(",")).trim());
+                char[] stringChars =  stringa.toCharArray();
+                System.out.println(Arrays.toString(Arrays.toString(stringChars).split(",")));
 
             }
 
